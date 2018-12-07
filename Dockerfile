@@ -58,7 +58,7 @@ ARG cachebuildozersha=40b94a55aad8056a8298ad83b650ad3af3cb98e96642dc31a207161eca
 ARG cachebuildozerfile=cachebuildozer034.tar.gz
 
 # installs buildozer and dependencies
-RUN pip3 install --user Cython==0.25.2 appdirs buildozer==0.34 sh
+RUN pip install --user Cython==0.25.2 appdirs buildozer==0.34 sh
 # calling buildozer adb command should trigger SDK/NDK first install and update
 # but it requires a buildozer.spec file
 RUN cd /tmp/ && buildozer init && buildozer android adb -- version \
